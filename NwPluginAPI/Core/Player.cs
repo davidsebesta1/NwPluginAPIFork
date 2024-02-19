@@ -517,6 +517,10 @@ namespace PluginAPI.Core
 
 		#endregion
 
+		#region Implicit reference hub operator
+		public static implicit operator ReferenceHub(Player player) => player.ReferenceHub;
+		#endregion
+
 		#endregion
 
 		#region Public Parameters
@@ -722,7 +726,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		[Obsolete("Use UnitId instead of UnitName, this method will return null", true)]
 		public string UnitName => null;
-		
+
 		/// <summary>
 		/// Gets the player unit Id, -1 if unset
 		/// </summary>
